@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url("assets/mr.otf");
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Minecraft";
+    color: #FDFDFD;
+}
+.ordered{
+    width: 400px;
+    margin: 20px;
+}
+.sign {
+    width: 80vw;
+    max-width: 590px;
+    padding: 5px;
+    margin: 5px;
+    background-color: #BFA065;
+    border-style: solid;
+    border-width: thick;
+    border-color: #7D6237;
+}
+#sign-box{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#grass {
+    padding: 40px;
+    background: url("assets/grass.png");
+    background-size: auto;
+}
+
+#content {
+    padding: 40px;
+    background: url("assets/stone.png");
+}
+header {
+    height: 20vh;
+    text-align: center;
+    background: url("assets/clouds.png") no-repeat center;
+    background-size: 100% 20vh;
+}
+body{
+    background-color: #98C1FF;
+}
+footer {
+    background: url("assets/bedrock.png");
+    background-size: auto;
+    text-align: center;
+}
+h1 {
+    font-size: 50px;
+    text-shadow: 5px 5px #3F3F3F;
+}
+h2 {
+    text-shadow: 4px 4px #3F3F3F;
+    font-size: 40px;
+}
+h3 {
+    font-size: 30px;
+    text-shadow: 3px 3px #3F3F3F;
+}
+p {
+    font-size: 20px;
+    text-shadow: 2px 2px #3F3F3F;
+}
+ol {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 30px;
+}
