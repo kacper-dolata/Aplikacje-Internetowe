@@ -1,0 +1,18 @@
+body {
+    margin: 20px;
+}
+#contener{
+    display: flex;
+    flex-direction: column;
+}
+#searchInput{
+    width: 100%;
+}
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+}
