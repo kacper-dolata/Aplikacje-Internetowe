@@ -1,0 +1,40 @@
+#board{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#map {
+    width: 600px;
+    height: 300px;
+    border: 1px solid black;
+}
+#buttons{
+    padding: 10px;
+}
+#rasterMap {
+    width: 600px;
+    height: 300px;
+    border: 1px solid black;
+}
+#puzzleContainer {
+    display: inline-block;
+    justify-content: space-evenly;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(4, 75px);
+}
+.grid div {
+    width: 150px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    background-color: red;
+}
+.draggable{
+    margin: 5px;
+    cursor: grab;
+}
