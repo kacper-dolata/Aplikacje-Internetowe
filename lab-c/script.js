@@ -21,8 +21,9 @@ document.getElementById("saveButton").addEventListener("click", function() {
         let rasterContext = rasterMap.getContext("2d");
         rasterContext.drawImage(canvas, 0, 0, 300, 150);
         console.log("Image saved.");
+        let row = 4, col = 4;
 
-        let empty_board = createBoard();
+        let empty_board = createBoard(row, col);
         rasterMap.parentNode.replaceChild(empty_board, rasterMap);
 
         createPuzzlePieces(canvas);
@@ -32,10 +33,10 @@ document.getElementById("saveButton").addEventListener("click", function() {
             target.addEventListener('dragover', (e) => {
                 e.preventDefault();
             });
-            target.addEventListener("dragenter", function (event) {
+            target.addEventListener("dragenter", function () {
                 this.style.background = "orange";
             });
-            target.addEventListener("dragleave", function (event) {
+            target.addEventListener("dragleave", function () {
                 this.style.background = "red";
             });
             target.addEventListener('drop', (e) => {
@@ -57,7 +58,7 @@ document.getElementById("saveButton").addEventListener("click", function() {
     });
 });
 
-document.getElementById("getLocation").addEventListener("click", function(event) {
+document.getElementById("getLocation").addEventListener("click", function() {
     if (!navigator.geolocation) {
         console.log("No geolocation.");
         return;
@@ -79,12 +80,12 @@ document.getElementById("getLocation").addEventListener("click", function(event)
     });
 });
 
-function createBoard() {
+function createBoard(row, col) {
     let grid = document.createElement("div");
     grid.classList.add("grid");
     grid.id = "grid";
 
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < row*col; i++) {
         let cell = document.createElement("div");
         cell.classList.add("drop-target");
         cell.id = "cell_" + (i + 1);
@@ -177,6 +178,7 @@ function checkPuzzleCompletion() {
     });
 
     if (correctCount === dropTargets.length) {
+        console.log("Gratulacje, Wyrgałeś!");
         notifyMe("Gratulacje, Wyrgałeś!");
     }
 
